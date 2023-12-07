@@ -43,8 +43,11 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
 
 * If any issues with initalization occurs the indvidual create statements for the databases and the tables can be found in the Basic Database Creation file. These can be run in pgAdmin4 query tool or in MySQL.
 - # Inserting Values Into The Database (Samples CSVs)
-   - Download the sample Brands, Location, and Traffic csv files and place them in an area that is easy to find.
-   - For the samples you can run the Sample_Insert.py script. You will need to open the script and enter your Superuser name and password to your database server.
+   - Download the sample [Brand](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/blob/main/Brand%20CSV%20Sample.csv), [Location](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/blob/main/Location%20CSV%20Sample.csv), and [Traffic](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/blob/main/Traffic%20CSV%20Sample.csv) csv files and place them in an area that is easy to find.
+   - For the samples you can run the [Sample_Insert.py](Sample_Insert.py) script. You will need to open the script and enter your Superuser name and password to your database server.
+     ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/0a8ca067-7c2e-48c3-aed5-86e70386403f)
+   - Once the script completes you should have 100 rows of data in each of the 3 tables. 
+
 - # Inserting Values Into The Database (Dewey API Calls/ Full Dataset)
     - You will need an account to Dewey Data (https://auth.deweydata.io/)
     - You will need to set up an API Key. For a how to on setting up an API key follow the tutorial [here](https://community.deweydata.io/t/bulk-downloading-data-using-v3-api-using-python/26533) or see the image below Save this API key as you will need it later.
@@ -67,10 +70,12 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
 
     - For each file the file will be downloaded, unzipped, read each row into the corresponding database table, then deletes the file from storage.
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/5b925fcc-12b6-4578-97e7-3c276bd0693e)
-
-
     - Once the scripts completes you can refresh your pgAdmin4 portal or run \l from the command line terminal in the bin directory to view your table and data. Below is a look at the first 100 rows of the traffic table in pgAdmin4
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/991a0c4f-7e4b-42bd-8731-5eb33649a49e)
 
     - The data tables should look similar to the sample CSV files when looking at the database. 
     - * Some of the tables require a lot of storage to hold the database locally. The scripts may also take a while to complete depending on the size of the dataset you are collecting/updating.
+
+# Have questions or suggestions?
+  - Please reach out to me at tonidbusiness@gmail.com
+
