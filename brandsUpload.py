@@ -2,9 +2,7 @@
 import csv
 import requests
 import psycopg2
-import pandas as pd
 import gzip
-import io
 import sys
 import os
 
@@ -23,15 +21,14 @@ while True:
 
 
 #database connection
-password='YOUR_PASSWORD'
-db = psycopg2.connect("host=localhost dbname=footTraffic user=postgres password=password")
+db = psycopg2.connect("host=localhost dbname=footTraffic user=YOUR_SUPERUSER password=YOUR_PASSWORD")
 cur = db.cursor()
 
 #API Key
-API_KEY = "ENTER_YOUR_API_KEY"
+API_KEY = "YOUR_API_KEY"
 
 #Safegraph Data Path
-safegraph_Path = "https://app.deweydata.io/external-api/v3/products/f8b3db87-71a0-4c67-840b-82acb088bc0a/files"
+safegraph_Path = "YOUR_API_LINK"
 
 #collects result json objects from safegraph/advan
 results = requests.get(url=safegraph_Path,
@@ -50,11 +47,12 @@ for link_data in response_json['download_links']:
 
     #The file is unziped, read as a csv and then inserted into the database table
     with gzip.open(link_data['file_name'], 'rt', newline='',encoding='utf8') as csvfile:
-        reader = csv.reader(csvfile)
+        reader = csv.reader("YOUR_FILE_PATH/Location_CSV_Sample.csv")
         for row in reader:
-            #This is the insert
-            insert_sql = ('INSERT INTO public.\"Location\"(placekey, parent_placekey, safegraph_brand_ids, location_name, brands, store_id, top_category, sub_category, naics_code, latitude, longitude, street_address, city, region, postal_code, open_hours, category_tags, opened_on, closed_on, tracking_closed_on, geometry_type, polygon_wkt, polygon_class, enclosed, phone_number, is_synthetic, includes_parking_lot, iso_country_code, wkt_area_sq_meters, domains, website) '
-                          'VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING;')
+            # This is the insert
+            insert_sql = (
+                'INSERT INTO public.\"Brand\"(safegraph_brand_ids, brand_name, parent_safegraph_brand_id, naics_code,top_category, sub_category, stock_symbol, stock_exchange, iso_country_codes_open, iso_country_codes_closed) '
+                'VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING;')
             cur.execute(insert_sql, row)
             db.commit()
         else:

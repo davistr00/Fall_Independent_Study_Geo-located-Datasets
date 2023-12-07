@@ -29,7 +29,7 @@ cur = db.cursor()
 API_KEY = "ENTER YOUR API KEY HERE"
 
 #Advan Data Path
-Advan_Path = "https://app.deweydata.io/external-api/v3/products/176f0262-c1f6-4dbe-be43-6a6eb21bcf8a/files"
+Advan_Path = "ENTER YOUR API LINK HERE"
 
 #collects result json objects from safegraph/advan
 results = requests.get(url=Advan_Path,
