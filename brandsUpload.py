@@ -1,4 +1,6 @@
-# import requests
+# Code by Toni Davis
+# Code References for API Connection and File Download https://community.deweydata.io/t/bulk-downloading-data-using-v3-api-using-python/26533#h-2-get-a-product-path-2
+import requests
 import csv
 import requests
 import psycopg2
