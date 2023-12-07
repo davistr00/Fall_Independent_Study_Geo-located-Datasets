@@ -42,3 +42,7 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
   - Once completed you will run the command "psql -U YOUR_SUPERUSER_NAME -d footTraffic < FILE_PATH" you will again need to add in your superuser name and include the file path for the Create.sql file. You can also add the file directly in the bin file and just call Create.sql
   - You can then run \l to test that the database was added and set up or you can open pgAdmin4 and refresh your server to check the database initalization.
 
+* If any issues with initalization occurs the indvidual create statements for the databases and the tables can be found in the Basic Database Creation file. These can be run in pgAdmin4 query tool or in MySQL.
+- # Inserting Values Into The Database
+   - Download the sample Brands, Location, and Traffic csv files and place them in an area that is easy to find.
+   - For the samples you can run the Sample_Insert.py script. You will need to open the script and enter your Superuser name and password to your database server. 
