@@ -43,6 +43,12 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
   - You can then run \l to test that the database was added and set up or you can open pgAdmin4 and refresh your server to check the database initalization.
 
 * If any issues with initalization occurs the indvidual create statements for the databases and the tables can be found in the Basic Database Creation file. These can be run in pgAdmin4 query tool or in MySQL.
-- # Inserting Values Into The Database
+- # Inserting Values Into The Database (Samples CSVs)
    - Download the sample Brands, Location, and Traffic csv files and place them in an area that is easy to find.
-   - For the samples you can run the Sample_Insert.py script. You will need to open the script and enter your Superuser name and password to your database server. 
+   - For the samples you can run the Sample_Insert.py script. You will need to open the script and enter your Superuser name and password to your database server.
+- # Inserting Values Into The Database (Dewey API Calls/ Full Dataset)
+    - You will need an account to Dewey Data (https://auth.deweydata.io/)
+    - You will need to set up an API Key. For a how to on setting up an API key follow the tutorial here (https://community.deweydata.io/t/bulk-downloading-data-using-v3-api-using-python/26533) Save this API key as you will need it later. 
+    - Once you have an account and API Key you will need to subscribe to Global Places (POI) & Geometry and Brand Info from SafeGraph and Weekly Patterns - Foot Traffic from Advan. You will follow the same tutorial above to set up the subscriptions and to collect the connection urls.
+    - You will need to download the brandUpload.py, locationUpload.py, and trafficUpload.py scripts and store them in an easy to find area.
+    - Depending on which table you want to update you will open that upload file. for example 
