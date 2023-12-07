@@ -63,12 +63,15 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/b6002ef4-beab-418b-bca0-32b210a33c1f)
 
     - You will then enter your API Key and API URL in the directed field. You will need to do this to all of the upload files.
+    - 
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/d974deeb-1836-4b7c-acac-c334205e55d9)
 
     - When you run the script the API will be called and the script will automatically collect file links.
+    - 
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/383df87c-052a-4477-a86b-4c3103e90e98)
 
     - For each file the file will be downloaded, unzipped, read each row into the corresponding database table, then deletes the file from storage.
+    - 
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/5b925fcc-12b6-4578-97e7-3c276bd0693e)
     - Once the scripts completes you can refresh your pgAdmin4 portal or run \l from the command line terminal in the bin directory to view your table and data. Below is a look at the first 100 rows of the traffic table in pgAdmin4
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/991a0c4f-7e4b-42bd-8731-5eb33649a49e)
