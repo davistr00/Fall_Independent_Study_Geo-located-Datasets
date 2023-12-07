@@ -28,3 +28,17 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
 ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/04f822f5-52c5-484b-9984-85dd367fb400)
 
 * Sample CSV Files for Brands, Location, and Traffic are provided
+
+# How to Recreate the project
+- Make sure your system is up-to date and follows the system requirments set above.
+- 
+- # Setting Up The Database
+  - Download the Create.sql file and place it in an easy to find area
+  - Make sure you have set up your superuser and password when you set up postgreSQL on your system.
+  - You will then want to open up your command prompt terminal (you may need to run as admin if connecction error occurs)
+  - Once inside the command prompt terminal you will want to navigate to your bin file a typical path for this folder will look like this "C:\Program Files\PostgreSQL\16\bin"
+  - You will then create the database using the "createdb -U YOUR_SUPERUSER_NAME footTraffic" you will need to enter your superuser name in the command.
+  - You will then need to enter your password you set for your superuser when setting up postgreSQL
+  - Once completed you will run the command "psql -U YOUR_SUPERUSER_NAME -d footTraffic < FILE_PATH" you will again need to add in your superuser name and include the file path for the Create.sql file. You can also add the file directly in the bin file and just call Create.sql
+  - You can then run \l to test that the database was added and set up or you can open pgAdmin4 and refresh your server to check the database initalization.
+
