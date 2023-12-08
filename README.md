@@ -19,7 +19,7 @@ For this project I used data from SafeGraph for location and brand data, and for
 
 The Brand data collected has 10 columns and 8657 rows. The brand data collects the safegraph brand ID, brand name, parent safegraph brand ID, naics code, top category, subcategory, stock symbol, stock exchange, iso country codes open, and iso country codes closed for each brand. 
 ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/3b425a5e-5ddc-41a8-8dc2-3cf8f2a8de5a)
-
+code(https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/blob/c47f66a97522a5cfdbfb7673677a30f0ec379d4c/Brand%20CSV%20Sample.csv)
 
 The Location data collected has 31 columns. This table is meant to be regularly updated as more data is released. The location data is comprised of a placekey, parent placekey, safegraph brand ID, location name, top category, sub category, nacis code, latitude, longitude, street address, city, region, postal code, open hours, category tags, opened on, closed on, tracking closed on, geometry type, polygon weight, polygon class, enclosed, phone number, if it is synthetic, if it includes parking, iso country code, weighted area in square meters, domains, websites. 
 ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/f731ffdf-de2c-443a-908a-c9707bb7ce6d)
