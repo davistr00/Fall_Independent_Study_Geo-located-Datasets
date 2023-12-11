@@ -19,7 +19,7 @@ For this project I used data from SafeGraph for location and brand data, and for
 
 The Brand data collected has 10 columns and 8657 rows. The brand data collects the safegraph brand ID, brand name, parent safegraph brand ID, naics code, top category, subcategory, stock symbol, stock exchange, iso country codes open, and iso country codes closed for each brand. 
 ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/3b425a5e-5ddc-41a8-8dc2-3cf8f2a8de5a)
-
+code(https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/blob/c47f66a97522a5cfdbfb7673677a30f0ec379d4c/Brand%20CSV%20Sample.csv)
 
 The Location data collected has 31 columns. This table is meant to be regularly updated as more data is released. The location data is comprised of a placekey, parent placekey, safegraph brand ID, location name, top category, sub category, nacis code, latitude, longitude, street address, city, region, postal code, open hours, category tags, opened on, closed on, tracking closed on, geometry type, polygon weight, polygon class, enclosed, phone number, if it is synthetic, if it includes parking, iso country code, weighted area in square meters, domains, websites. 
 ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/f731ffdf-de2c-443a-908a-c9707bb7ce6d)
@@ -63,12 +63,15 @@ The Traffic data collected has 52 columns. The Traffic table like the Location t
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/b6002ef4-beab-418b-bca0-32b210a33c1f)
 
     - You will then enter your API Key and API URL in the directed field. You will need to do this to all of the upload files.
+    - 
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/d974deeb-1836-4b7c-acac-c334205e55d9)
 
     - When you run the script the API will be called and the script will automatically collect file links.
+    - 
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/383df87c-052a-4477-a86b-4c3103e90e98)
 
     - For each file the file will be downloaded, unzipped, read each row into the corresponding database table, then deletes the file from storage.
+    - 
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/5b925fcc-12b6-4578-97e7-3c276bd0693e)
     - Once the scripts completes you can refresh your pgAdmin4 portal or run \l from the command line terminal in the bin directory to view your table and data. Below is a look at the first 100 rows of the traffic table in pgAdmin4
       ![image](https://github.com/davistr00/Fall_Independent_Study_Geo-located-Datasets/assets/125899195/991a0c4f-7e4b-42bd-8731-5eb33649a49e)
