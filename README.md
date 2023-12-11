@@ -1,6 +1,9 @@
 # Fall_Independent_Study_Geo-located-Datasets
-This project's goal is to collect geo-spatial data and foot traffic data to create a postgres database to store the data. The database is also supposed to be easily updated as new data is avaiable. 
+This project's goal is to collect geo-spatial and foot traffic to create a postgres database to store the data that is easily updateable as more information comes avaialable. 
 
+# How-To Video Here
+[<img src="https://img.youtube.com/vi/nlyKeS9mQcQ/hqdefault.jpg" width="600" height="300"
+/>](https://www.youtube.com/embed/nlyKeS9mQcQ)
 # System Requirements
 - Python 3.11
 - latest version of postgreSQL
